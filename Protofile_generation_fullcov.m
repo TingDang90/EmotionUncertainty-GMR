@@ -5,13 +5,13 @@ function [ ] = Protofile_generation_fullcov( path,N )
 % path ---- folder path to store the generated protofile
 % N --- dimension of GMM
 
-Filename=['D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\proto',num2str(N),'c.txt'];
+Filename=[path,'\proto.txt'];
 fileID = fopen(Filename,'wt');
 
 string=['~o <Vecsize> ',num2str(N),' <MFCC>\n'];
 fprintf(fileID,string);
 
-fprintf(fileID,['~h "proto',num2str(N),'c"\n']);
+fprintf(fileID,['~h "proto"\n']);
 fprintf(fileID,'<BeginHMM>\n');
 fprintf(fileID,' <Numstates> 3\n');
 fprintf(fileID,' <State> 2\n');
