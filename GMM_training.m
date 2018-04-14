@@ -31,9 +31,8 @@ GMM_Based_Mapping_Function( filepath1,D_num, mode );%%%GMM Model trainning
 [GMM_weight,GMM_mean,GMM_var ] = GMM_Para_reading_FullCov( 'D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\GMM_mix1',D_num+1);
 %     [GMM_weight1{session_num},GMM_mean1{session_num},GMM_var1{session_num} ] = GMM_Para_reading( 'D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\GMM_mix1');
 %     %%%%%%%%%%%%%%%%%%%%%%%%%%%%UBM%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-delete('D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\mfc\*.mfc');%%deleting mfc files
-delete(['D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\GMM_mix1\proto',num2str(D_num),'c']);
-delete(['D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\GMM_mix1\proto']);
-delete(['D:\PhD_UNSW\Emotion\CreativeIT\mfcc2\HTK\proto',num2str(D_num),'c.txt']);
+delete([path,'\mfc\*.mfc']);%%deleting mfc files
+delete([path,'\proto.txt']);
+delete([path,'\GMM_mix1\proto']);
 end
 
