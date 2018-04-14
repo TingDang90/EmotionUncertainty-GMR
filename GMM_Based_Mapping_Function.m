@@ -1,4 +1,4 @@
-function [ ] = 	GMM_Based_Mapping_Function( path,train_list,num,mode )
+function [ ] = 	GMM_Based_Mapping_Function( path,train_list,mode )
 %
 %   This function builds GMM-based mapping fuction
 %   It is a prediction mehod
@@ -14,8 +14,6 @@ function [ ] = 	GMM_Based_Mapping_Function( path,train_list,num,mode )
 %   path            --- path for HTK
 %   train_list      --- the path of trian list 
 %                       (train list is for HTK training (strings of training utterance names))
-
-%   num             --- dimension of GMM
 
 %   mode            --- power of 2 indicating mixture number
 %                       i.e mode=3 means 2^3=8 mixtures
