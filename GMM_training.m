@@ -2,6 +2,7 @@ function [ GMM_weight,GMM_mean,GMM_var  ] = GMM_training( path,features_train,la
 % This function trains the joint GMM of the feature vector and label
 % vectors
 
+% Input
 %   features_train   --- training features (each cell stores one utterance)
 %                    --- In each cell, feature matrix is of shape n*m1
 %                                      n -- frames
@@ -15,6 +16,20 @@ function [ GMM_weight,GMM_mean,GMM_var  ] = GMM_training( path,features_train,la
 %   mode            --- power of 2 indicating mixture number
 %                       i.e mode=3 means 2^3=8 mixtures
 %                           mode=2 means 2^2=4 mixtures
+
+%Output:
+
+% GMM_weight --- GMM weights of shape 1 x n
+%                 n  --- mixture number
+
+% GMM_mean   --- GMM mean vectors n x m 
+%                 n  --- mixture number
+%                 m  --- feature dimension
+
+
+% GMM_cov    --- GMM covariance matrix (n cell)
+%                each cell represents the covariance of each mixture
+%                matrix in each cell is of shape m x m
 
 %%%%%%%%%%%%%%%%%%%%%%%%%Protofile generation%%%%%%%%%%%%%%%%%%%%%
 D_num=size(features_train{1},2)+size(label_train{1},2); % joint training

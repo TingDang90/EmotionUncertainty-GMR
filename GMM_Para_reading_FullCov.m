@@ -12,10 +12,10 @@ function [GMM_weight,GMM_mean,GMM_cov ] = GMM_Para_reading_FullCov( filepath,dim
 %                 n  --- mixture number
 %                 m  --- feature dimension
 
+
 % GMM_cov    --- GMM covariance matrix (n cell)
 %                each cell represents the covariance of each mixture
 %                matrix in each cell is of shape m x m
-
 
 fidin=fopen([filepath,'\proto']);
 
