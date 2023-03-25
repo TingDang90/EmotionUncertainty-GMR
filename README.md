@@ -1,7 +1,7 @@
 # Emotion Prediction Uncertainty Using Gaussian Mixture Regression
 This code is developed to predict uncertainty information of emotion by  multi-rater information. 
 
-![Alt text](prediction.png "High correlation between predicted emotion uncertainty and underlying true uncertainty")
+<img src="prediction.png" alt="Alt text" width="400"/>
 
 ## Abstract
 <p style="text-align: justify;">
